@@ -25,9 +25,3 @@ El **Sistema de Inventario** es una aplicación que permite gestionar el inventa
 - Django
 - SQLite (o el sistema de base de datos que utilices)
 
-## Instalación
-
-1. Clona el repositorio:
-
-   ```bash
-   git clone https://github.com/Jovany721/Sistema_de_Inventario.git
