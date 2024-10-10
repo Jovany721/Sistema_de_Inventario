@@ -1,0 +1,133 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{%  block content %}
+
+
+
+
+<div class="container">
+    <div class="row"> 
+<div class="col-6">
+    <h2 >
+        BUSQUEDA
+    </h2>
+
+</div>
+        
+    </div>
+
+
+
+</div>
+
+
+<div class="container">
+    <div class="row"> 
+        
+        <input id="entrada" class="col-11" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+     <a class="col-1 btn btn-primary" href="/search_bd/< >">Buscar</a>
+    </div>
+</div>
+  
+
+
+
+
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-12">
+
+            <table class=" table table-striped">
+                <thead>
+                  <tr>
+                    <th >PRODUCTO</th>
+                    <th >CANTIDAD</th>
+                    <th >PRECIO</th>
+                    <th> </th>
+            
+                  </tr>
+                </thead>
+            
+                {%  for c in datos  %}
+                <tbody>
+                  <tr>
+                  
+                    <td>
+                      
+             {{  c.producto }}
+            
+            
+               
+            
+            
+            
+                    </td>
+                    <td>  
+                        
+                    
+               {{  c.cantidad }}
+                        
+                        
+                            </td>
+                    <td>
+                
+             Q.{{  c.precio }}
+            
+            
+             
+                    </td> 
+            
+                   
+                    <td>
+                        <a  class="btn btn-danger" href="eliminar_reg/{{c.producto}}">eliminar</a>
+                        <a  class="btn btn-primary">modificar</a>
+                    </td>
+                   
+                    {% endfor%}
+            
+            
+            
+            
+            
+            
+            
+                </tr>
+                   </tbody>
+              </table>
+            
+            
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{%  endblock %}  
